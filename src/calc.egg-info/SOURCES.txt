@@ -1,3 +1,4 @@
+README.md
 setup.py
 src/calc.egg-info/PKG-INFO
 src/calc.egg-info/SOURCES.txt
