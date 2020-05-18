@@ -14,11 +14,6 @@ pipeline {
 			steps {
 				sh 'pytest'
 			}
-			post {
-				always {
-					junit 'test-reports/*.xml'
-				}
-			}
 		}
 	}
 }
