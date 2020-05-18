@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent none
     stages {
         stage('Build') {
             steps {
@@ -9,6 +9,11 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'pytest'
+            }
+            post {
+              always {
+                junit 'test-reports/*.xml'
+              }
             }
         }
     }
