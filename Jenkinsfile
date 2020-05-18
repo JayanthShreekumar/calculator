@@ -12,7 +12,12 @@ pipeline {
 		}
 		stage('Test') {
 			steps {
-				sh 'pytest'
+				sh 'pytest --junit-xml=pytest_unit.xml'
+			}
+			post {
+				always {
+					junit '*.xml' 
+				}
 			}
 		}
 	}
