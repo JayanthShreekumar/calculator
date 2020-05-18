@@ -1,7 +1,7 @@
 pipeline {
 	agent {
 		docker {
-			image 'python'
+			image 'jayantha:1.0'
 		}
 	}
 	stages {
