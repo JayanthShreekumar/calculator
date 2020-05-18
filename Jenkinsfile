@@ -7,7 +7,7 @@ pipeline {
 	stages {
 		stage('Build') {
 			steps {
-				sh 'python setup.py develop'
+				sh 'python src/calc/Calculator.py'
 			}
 		}
 		stage('Test') {
