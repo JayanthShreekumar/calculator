@@ -1,13 +1,12 @@
 pipeline {
 	agent {
 		docker {
-			image 'python:3'
+			image 'jayantha:1.0'
 		}
 	}
 	stages {
 		stage('Build') {
 			steps {
-				sh 'pip install -r requirements.txt'
 				sh 'python setup.py develop'
 			}
 		}
